@@ -101,12 +101,12 @@ public class Display extends JFrame {
                 labelScore.setHorizontalAlignment(SwingConstants.LEFT);
                 add(labelScore);
 
-                labelScoreElMorad = new JLabel("0"); //TODO
+                labelScoreElMorad = new JLabel(String.valueOf(Simulation.getInstance().ElMorad.score));
                 labelScoreElMorad.setBounds(45, 45, 150, 15);
                 labelScoreElMorad.setHorizontalAlignment(SwingConstants.CENTER);
                 add(labelScoreElMorad);
 
-                labelScoreKarus = new JLabel("0"); //TODO
+                labelScoreKarus = new JLabel(String.valueOf(Simulation.getInstance().Karus.score));
                 labelScoreKarus.setBounds(55, 45, 150, 15);
                 labelScoreKarus.setHorizontalAlignment(SwingConstants.RIGHT);
                 add(labelScoreKarus);
@@ -116,12 +116,12 @@ public class Display extends JFrame {
                 labelKills.setHorizontalAlignment(SwingConstants.LEFT);
                 add(labelKills);
 
-                labelKillElMorad = new JLabel("0"); //TODO
+                labelKillElMorad = new JLabel(String.valueOf(Simulation.getInstance().ElMorad.kills));
                 labelKillElMorad.setBounds(45, 65, 150, 15);
                 labelKillElMorad.setHorizontalAlignment(SwingConstants.CENTER);
                 add(labelKillElMorad);
 
-                labelKillKarus = new JLabel("0"); //TODO
+                labelKillKarus = new JLabel(String.valueOf(Simulation.getInstance().Karus.kills));
                 labelKillKarus.setBounds(55, 65, 150, 15);
                 labelKillKarus.setHorizontalAlignment(SwingConstants.RIGHT);
                 add(labelKillKarus);
@@ -131,12 +131,12 @@ public class Display extends JFrame {
                 labelTotalDamage.setHorizontalAlignment(SwingConstants.LEFT);
                 add(labelTotalDamage);
 
-                labelTotalDamageElMorad = new JLabel("0"); //TODO
+                labelTotalDamageElMorad = new JLabel(String.valueOf(Simulation.getInstance().ElMorad.totalDamage));
                 labelTotalDamageElMorad.setBounds(45, 85, 150, 15);
                 labelTotalDamageElMorad.setHorizontalAlignment(SwingConstants.CENTER);
                 add(labelTotalDamageElMorad);
 
-                labelTotalDamageKarus = new JLabel("0"); //TODO
+                labelTotalDamageKarus = new JLabel(String.valueOf(Simulation.getInstance().Karus.totalDamage));
                 labelTotalDamageKarus.setBounds(55, 85, 150, 15);
                 labelTotalDamageKarus.setHorizontalAlignment(SwingConstants.RIGHT);
                 add(labelTotalDamageKarus);
