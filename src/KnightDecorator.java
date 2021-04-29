@@ -5,7 +5,7 @@ public abstract class KnightDecorator extends Knight
 {
    //TODO
     protected Knight tempKnight;
-    protected int pieceSize = 20;
+    protected int pieceSize = 15;
     protected int symbolSize = 5;
 
     public KnightDecorator(Knight newKnight){
