@@ -3,14 +3,15 @@ import java.awt.*;
 public class Grade2Decorator extends KnightDecorator {
 
     /**
-     * Draws the grade2Decorator for the knight depending on its national points
-     * @param newKnight specific knight
+     * Draws the symbol on the knight depending on its national points
+     * @param Knight specific knight
      */
-    public Grade2Decorator(Knight newKnight) {
+    public Grade2Decorator(Knight Knight) {
 
-        super(newKnight);
+        super(Knight);
 
     }
 
     //TODO
+    // Draw symbol and health
 }

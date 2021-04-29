@@ -5,7 +5,7 @@ public class BasicKnight extends Knight
     /**
      * Constructor for a BasicKnight
      * @param colorOfTeam color of the knight's team
-     * @param startingCoordinate spawn location of knight
+     * @param startingCoordinate spawn location of the knight
      */
     BasicKnight(Color colorOfTeam, int[] startingCoordinate){
         this.setTeamColor(colorOfTeam);

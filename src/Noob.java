@@ -4,6 +4,10 @@ import java.awt.geom.Rectangle2D;
 
 public class Noob extends KnightDecorator{
 
+    /**
+     * Constructor for the Noob class
+     * @param knight specific knight
+     */
     public Noob(Knight knight) {
         super(knight);
         Graphics g = Display.getInstance().getGraphics();
@@ -11,6 +15,10 @@ public class Noob extends KnightDecorator{
         drawKnight(g);
     }
 
+    /**
+     * Determines which knight needs to be drawn and calls that function
+     * @param g graphic component
+     */
     public void drawKnight(Graphics g){
 
         switch (tempKnight.typeOfKnight) {
@@ -20,6 +28,10 @@ public class Noob extends KnightDecorator{
         }
     }
 
+    /**
+     * Paints a mage
+     * @param g graphic component
+     */
     public void paintMage(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
 
@@ -29,6 +41,10 @@ public class Noob extends KnightDecorator{
         g2d.fillRect(0,0,pieceSize,pieceSize);        // (0,0) will always be the location due to translation
     }
 
+    /**
+     * Paints a priest
+     * @param g graphic component
+     */
     public void paintPriest(Graphics g){
         Graphics2D g2d = (Graphics2D) g;
 
@@ -36,6 +52,10 @@ public class Noob extends KnightDecorator{
         g2d.fillRect(tempKnight.getxCoordinate(), tempKnight.getyCoordinate(), pieceSize, pieceSize);
     }
 
+    /**
+     * Paints Rogue
+     * @param g graphic component
+     */
     public void paintRogue(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
 
