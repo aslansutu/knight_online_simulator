@@ -40,7 +40,6 @@ public class Simulation extends JPanel {
                 Display.getInstance().repaint();
                 Simulation.getInstance().stepAll();
 
-                // TODO
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -49,11 +48,10 @@ public class Simulation extends JPanel {
     }
 
     public void stepAll() {
-        // TODO
+
         Random random = new Random();
         int numberOfKnights = 3;
         int knightNumber;
-
 
         // Summon new knights if necessary
         if (ElMorad.members.size() < 8){
@@ -112,6 +110,19 @@ public class Simulation extends JPanel {
         for (int i = 0; i < Karus.members.size(); i++){
             Knight knight = Karus.members.get(i);
             newMovement.act(knight);
+
+            if (knight.getNationalPoints() >= 301){
+                new Grade1Decorator(new Noob(knight));
+            }
+            else if (knight.getNationalPoints() >= 151){
+                new Grade2Decorator(new Noob(knight));
+            }
+            else if (knight.getNationalPoints() >= 76){
+                new Grade3Decorator(new Noob(knight));
+            }
+            else{
+                new Noob(knight);
+            }
         }
 
         // calculate attacks and lower hp can attack only every second
