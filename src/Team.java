@@ -10,13 +10,6 @@ public class Team
     private int score;
     public Color teamColor;
 
-    private final int armyCapacity = 8;
-
-    private final int xCoordinateRed = 500;
-    private final int yCoordinateRed = 250;
-    private final int xCoordinateBlue = 850;
-    private final int yCoordinateBlue = 400;
-
     //TODO
 
     /**
@@ -24,6 +17,7 @@ public class Team
      * @param teamColor a specific color of the Color class
      */
     Team(Color teamColor){
+        int armyCapacity = 8;
         members = new ArrayList<>(armyCapacity);
         totalDamage = 0;
         kills = 0;
@@ -45,16 +39,16 @@ public class Team
 
 
         if (teamColor.equals(Color.RED)){
-            startingPoint[0] = xCoordinateRed;
-            startingPoint[1] = yCoordinateRed;
+            startingPoint[0] = 500;
+            startingPoint[1] = 250;
         }
         else if (teamColor.equals(Color.BLUE)){
-            startingPoint[0] = xCoordinateBlue;
-            startingPoint[1] = yCoordinateBlue;
+            startingPoint[0] = 850;
+            startingPoint[1] = 400;
         }
 
-        startingPoint[0] *= random.nextInt(radiusSize);
-        startingPoint[1] *= random.nextInt(radiusSize);
+        startingPoint[0] += random.nextInt(radiusSize*2)-radiusSize;
+        startingPoint[1] += random.nextInt(radiusSize*2)-radiusSize;
 
         return startingPoint;
     }
